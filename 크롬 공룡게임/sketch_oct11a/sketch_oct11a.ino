@@ -1,19 +1,18 @@
-#include "Keyboard.h"
-int state;
-int state2;
- const byte btn = 2;
- const byte btn2 = 3;
+#include "Keyboard.h"                                                                                                                                                                                                                                                                                                                 
+int state, state2;                                                                                                                                                                 
+const byte btn = 2;                                 
+ const byte btn2 = 3;                                                                                                                                                                                                                                                                                                                                                                                                                                          
 void setup() {
   // put your setup code here, to run once:
   Keyboard.begin();
  pinMode(btn, INPUT);
   pinMode(btn2, INPUT);
-}
+}                                                                                                             
 
-void loop() {
+void loop() {                    
   // put your main code here, to run repeatedly:
   state = digitalRead(btn);
-  state2 = digitalRead(btn2);
+   state2 = digitalRead(btn2);                                                                                                           
   if(state==0)
   {
     Keyboard.write(' ');
